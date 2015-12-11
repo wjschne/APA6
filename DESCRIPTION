@@ -1,0 +1,18 @@
+Package: APATables2
+Type: Package
+Title: Create American Psychological Association (APA) Style Tables
+Version: 0.1.0
+Author: Zachary T. Richardson and W. Joel Schneider
+Maintainer: Zachary T. Richardson <ZacharyTRichardson@gmail.com>
+Description: Due to human error, the process of manually creating APA (i.e.,
+    American Psychological Association style) style tables is prone to transcription
+    errors. Additionally, in R a large number of function calls are often needed to
+    obtain all of the desired information for a single APA style table. This package
+    creates PDF files (.pdf files) containing APA style tables for several types
+    of analyses via LaTeX. Using this package minimizes transcription errors and
+    reduces the number commands needed by the user. Currently, the following tables
+    can be created: Correlation tables - Correlation tables are created from data
+    frames using CorTable
+License: Unlimited
+LazyData: TRUE
+RoxygenNote: 5.0.0

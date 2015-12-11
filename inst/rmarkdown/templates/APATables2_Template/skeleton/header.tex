@@ -1,0 +1,14 @@
+\usepackage[singlelinecheck=false]{caption}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{mathptmx}
+\usepackage{pdflscape}
+\usepackage{dcolumn}
+\DeclareMathVersion{nxbold}
+\SetSymbolFont{operators}{nxbold}{OT1}{cmr} {b}{n}
+\SetSymbolFont{letters}  {nxbold}{OML}{cmm} {b}{it}
+\SetSymbolFont{symbols}  {nxbold}{OMS}{cmsy}{b}{n}
+\makeatletter
+\newcolumntype{B}[3]{>{\mathversion{nxbold}\DC@{#1}{#2}{#3} }c<{\DC@end} }
+\makeatother

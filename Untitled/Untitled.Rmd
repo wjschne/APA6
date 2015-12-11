@@ -1,0 +1,32 @@
+---
+title: "Title"
+author: "Author Name"
+output: 
+  pdf_document: 
+    keep_tex: yes
+    includes:
+      in_header: header.tex
+---
+
+```{r, echo=FALSE, results='asis'}
+# Load APATables2 package
+library(APATables2)
+library(dplyr, quietly = TRUE, warn.conflicts = FALSE)
+library(broom)
+library(pander)
+library(lsr)
+# Create data set
+d <- matrix(rnorm(20000),ncol = 10)
+
+# Create correlation table
+CorTable(d, caption = "Correlation Table of Dataset", notes = "Significant correlations are bolded at $\\alpha = .05$")
+
+aov(yield ~ block + N * P + K, npk) %>% APATables2::aovTable()
+
+
+m <- aov(yield ~ block + N * P + K, npk)
+```
+
+
+
+

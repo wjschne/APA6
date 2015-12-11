@@ -1,0 +1,11 @@
+---
+title:
+author:
+header-includes:
+  - \usepackage[singlelinecheck=false]{caption}
+  - \usepackage{graphicx}
+  - \usepackage{booktabs}
+  - \usepackage{tabularx}
+  - \usepackage{mathptmx}
+output: pdf_document
+---

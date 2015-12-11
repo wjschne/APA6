@@ -1,0 +1,25 @@
+---
+title: "Title"
+author: "Author Name"
+output: 
+  pdf_document: 
+    keep_tex: yes
+    includes:
+      in_header: header.tex
+---
+
+```{r, echo=FALSE, results='asis'}
+# Load APATables2 package
+library(APATables2)
+
+# Create data set
+d <- matrix(rnorm(20000),ncol = 20)
+
+# Create correlation table
+CorTable(d, caption = "Correlation Table of Dataset", notes = "Significant correlations are bolded at $\\alpha = .05$")
+
+```
+
+
+
+
