@@ -1,0 +1,4 @@
+name: APA6Tables (Word)
+description: >
+  Template to create tables in accordance with APA manuscript guidelines (6th edition; Word) using the APA6Tables package
+create_dir: false

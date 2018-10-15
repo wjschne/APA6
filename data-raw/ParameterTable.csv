@@ -1,0 +1,13 @@
+parameter,tableColnames,tableColnamesLatex,alignment,notes,notesLatex
+unstandardized,*b*,$b$,r,*b*&nbsp;=&nbsp;unstandardized coefficients.,$b$~=~unstandardized coefficients.
+se,*s~b~*,$s_b$,r,*s~b~*&nbsp;=&nbsp;standard error of *b*.,$s_b$~=~standard error of $b$.
+ci,% *CI*,$\%~CI$,c,*CI*&nbsp;=&nbsp;confidence interval for *b*.,$CI$~=~confidence interval for $b$.
+t.value,*t*,$t$,r,*t*&nbsp;=&nbsp;test statistic for H~0~.,$t$~=~test statistic for H\textsubscript{0}.
+p.value,*p*,$p$,r,*p*&nbsp;=&nbsp;probability of *b* if H~0~ is true.,$p$~=~probability of $b$ if H\textsubscript{0} is true.
+standardized,*&beta;*,$\beta$,r,*&beta;*&nbsp;=&nbsp;standardized regression coefficient.,$\beta$~=~standardized regression coefficient.
+zero.order.cor,*r~XY~*,$r_{XY}$,r,*r~XY~*&nbsp;=&nbsp;correlation of predictor and outcome.,$r_{XY}$~=~correlation of predictor and outcome.
+product.meausure,*&beta;r~XY~*,$\beta r_{XY}$,r,*&beta;r~XY~*&nbsp;=&nbsp;product measure (the sum of which totals *R*^2^).,$\beta r_{XY}$~=~product measure (the sum of which totals $R^2$).
+structure.coef,*r~X&#374;~*,$r_{X\hat{Y}}$,r,*r~X&#374;~*&nbsp;=&nbsp;correlation of predictor and predicted outcome.,$r_{X\hat{Y}}$~=~correlation of predictor and predicted outcome.
+partial.cor,*pr*,$pr$,r,*pr*&nbsp;=&nbsp;partial correlation.,$pr$~=~partial correlation.
+semipartial.cor,*sr*,$sr$,r,*sr*&nbsp;=&nbsp;semi-partial correlation.,$sr$~=~semi-partial correlation.
+semipartial.cor.squared,*sr*^2^,$sr^2$,r,*sr*^2^&nbsp;=&nbsp;proportion of outcome variance uniquely explained by each predictor.,$sr^2$~=~proportion of outcome variance uniquely explained by each predictor.

@@ -1,0 +1,140 @@
+\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+    \usepackage{xltxtra,xunicode}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \usepackage[unicode=true]{hyperref}
+\fi
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={Author Name},
+            pdftitle={Title},
+            colorlinks=true,
+            citecolor=blue,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\newcommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+  \title{Title}
+  \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+  \author{Author Name}
+  \preauthor{\centering\large\emph}
+  \postauthor{\par}
+  \date{}
+  \predate{}\postdate{}
+
+\usepackage[singlelinecheck=false]{caption}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{mathptmx}
+\usepackage{pdflscape}
+\usepackage{dcolumn}
+\DeclareMathVersion{nxbold}
+\SetSymbolFont{operators}{nxbold}{OT1}{cmr} {b}{n}
+\SetSymbolFont{letters}  {nxbold}{OML}{cmm} {b}{it}
+\SetSymbolFont{symbols}  {nxbold}{OMS}{cmsy}{b}{n}
+\makeatletter
+\newcolumntype{B}[3]{>{\mathversion{nxbold}\DC@{#1}{#2}{#3} }c<{\DC@end} }
+\makeatother
+
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+\begin{document}
+\maketitle
+
+\newcolumntype{d}{D{.}{.}{0.2}}
+
+\begin{table}[h]
+\caption{Correlation Table of Dataset}
+\begin{tabularx}{1\textwidth}{r@{.~}D{.}{.}{3.2}D{.}{.}{1.2} * {14}{d}}
+\toprule
+\multicolumn{1}{r}{} & \multicolumn{1}{c}{Mean} & \multicolumn{1}{c}{SD} & \multicolumn{1}{>{\centering\arraybackslash}X}{1} & \multicolumn{1}{>{\centering\arraybackslash}X}{2} & \multicolumn{1}{>{\centering\arraybackslash}X}{3} & \multicolumn{1}{>{\centering\arraybackslash}X}{4} & \multicolumn{1}{>{\centering\arraybackslash}X}{5} & \multicolumn{1}{>{\centering\arraybackslash}X}{6} & \multicolumn{1}{>{\centering\arraybackslash}X}{7} & \multicolumn{1}{>{\centering\arraybackslash}X}{8} & \multicolumn{1}{>{\centering\arraybackslash}X}{9} & \multicolumn{1}{>{\centering\arraybackslash}X}{10} & \multicolumn{1}{>{\centering\arraybackslash}X}{11} & \multicolumn{1}{>{\centering\arraybackslash}X}{12} & \multicolumn{1}{>{\centering\arraybackslash}X}{13} & \multicolumn{1}{>{\centering\arraybackslash}X}{14}\\
+\toprule 1 & -0.02 & 0.97 &  &  &  &  &  &  &  &  &  &  &  &  &  & \\
+2 & 0.01 & 1.02 & .04 &  &  &  &  &  &  &  &  &  &  &  &  & \\
+3 & 0.01 & 0.98 & .02 & -.01 &  &  &  &  &  &  &  &  &  &  &  & \\
+4 & 0.03 & 0.98 & -.02 & .01 & -.03 &  &  &  &  &  &  &  &  &  &  & \\
+5 & 0.04 & 1.00 & .01 & .01 & -.00 & -.02 &  &  &  &  &  &  &  &  &  & \\
+6 & -0.02 & 1.00 & -.03 & .03 & .01 & .06 & -.03 &  &  &  &  &  &  &  &  & \\
+7 & -0.00 & 0.98 & .03 & -.02 & .05 & -.04 & .01 & .00 &  &  &  &  &  &  &  & \\
+8 & 0.04 & 1.01 & -.00 & -.04 & .02 & .04 & .03 & .03 & -.06 &  &  &  &  &  &  & \\
+9 & 0.08 & 0.98 & .01 & -.04 & -.01 & -.01 & .06 & .04 & -.02 & -.00 &  &  &  &  &  & \\
+10 & 0.04 & 0.99 & -.03 & .01 & -.03 & -.03 & -.02 & .05 & -.00 & -.00 & .03 &  &  &  &  & \\
+11 & -0.01 & 1.00 & -.05 & -.02 & -.02 & -.02 & -.03 & -.02 & .02 & .02 & .02 & -.04 &  &  &  & \\
+12 & -0.04 & 1.01 & -.01 & .06 & .01 & -.01 & .04 & -.03 & .00 & .01 & -.01 & -.03 & -.03 &  &  & \\
+13 & 0.00 & 1.05 & -.05 & \multicolumn{1}{B{.}{.}{0.2}}{.07} & .05 & -.01 & -.02 & -.05 & .00 & -.03 & -.01 & -.01 & -.02 & \multicolumn{1}{B{.}{.}{0.2}}{.07} &  & \\
+14 & 0.00 & 1.00 & -.02 & -.02 & .01 & .03 & -.03 & .06 & .01 & \multicolumn{1}{B{.}{.}{0.2}}{.07} & -.01 & -.06 & .04 & .01 & -.06 & \\
+15 & -0.01 & 1.02 & .00 & .01 & -.02 & -.02 & -.01 & .01 & -.03 & -.00 & -.05 & .05 & .01 & .04 & .05 & -.05\\
+\toprule
+\end{tabularx}
+
+\emph{Note}: Significant correlations are bolded at $\alpha = .05$
+\end{table}
+
+\end{document}

@@ -1,0 +1,23 @@
+---
+title: "Untitled"
+author: "Author"
+output:
+  word_document:
+    reference_docx: mystyles.docx
+---
+
+```{r, echo = FALSE, results = 'asis', messages = FALSE}
+# Load APA6Tables package
+library(APA6Tables)
+library(psych)
+
+# Create data set
+d <- galton
+
+# Model data
+m <- lm(child ~ parent, data = d)
+
+# Create regression coefficents table
+lmCoefficients(m)
+
+```

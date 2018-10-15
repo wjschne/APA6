@@ -14,13 +14,13 @@ pvalueAPA <- function(p, inline = FALSE, mindigits = 2, maxdigits = 3){
     p.round <- ifelse(x > 0.5 * 10 ^ (-1 * mindigits),mindigits,maxdigits)
     if (x > 0.5 * 10 ^ (-1 * p.round)) {
       paste0(ifelse(inline,"$p=", ""),
-             sub(pattern = "0.",
+             sub(pattern = "0\\.",
                  replacement = ".",
                  formatC(x, p.round, format = "f")),
              ifelse(inline,"$", ""))
     } else {
       paste0(ifelse(inline, "$p<","<"),
-             sub(pattern = "0.",
+             sub(pattern = "0\\.",
                  replacement =  ".",
                  10 ^ (-1 * maxdigits)),
              ifelse(inline,"$",""))

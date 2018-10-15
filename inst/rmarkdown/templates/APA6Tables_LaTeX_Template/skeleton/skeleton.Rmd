@@ -1,0 +1,25 @@
+---
+title: "Title"
+author: "Author Name"
+output: 
+  pdf_document: 
+    keep_tex: yes
+    includes:
+      in_header: header.tex
+---
+
+```{r, echo = FALSE, results = 'asis', messages = FALSE}
+# Load APA6Tables package
+library(APA6Tables)
+
+# Create data set
+d <- matrix(rnorm(15000),ncol = 15)
+
+# Create correlation table
+CorTable(d, caption = "Correlation Table of Dataset", notes = "Significant correlations are bolded at $\\alpha = .05$", WidthProportion = 1, landscape = FALSE)
+
+```
+
+
+
+
